@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+       	Web Paint!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <style>
+
+      select {
+        display: inline !important;
+        width: 150px;
+      }
+
+      select:hover {
+        cursor: pointer;
+      }
+
+      .label {
+        display: inline !important;
+        cursor: default;
+      }
+
+      img {
+        width: 300px;
+        height: auto;
+        float: right;
+      }
+
+      canvas {
+        box-shadow: 1px 1px 10px slategrey;
+        margin-bottom: 1%;
+      }
+
+      #controls {
+        padding: 1%;
+        box-shadow: 1px 1px 10px slategrey;
+        float: left;
+        width: 60%;
+      }
+
+      .button-primary {
+        background-color: #BF00FF !important;
+        border: 1px solid #BF00FF !important;
+        color: white;
+      }
+
+      .button-primary:hover, .button-primary:active {
+        background-color: #BF00FF !important;
+        box-shadow: 1px 1px 10px slategrey;
+      }
+
+    </style>
+</head>
+
+
+<img src="logo.png" alt="">
+
+
+  <canvas id="draw"></canvas>
+
+  <div id="controls">
+    <!-- Paint Color -->
+    <button class="label">Color</button>
+    <select id="hex">
+      <option value="#000000">Black</option>
+      <option value="#ff0000">Red</option>
+      <option value="#ffa500">Orange</option>
+      <option value="#ffff00">Yellow</option>
+      <option value="#008000">Green</option>
+      <option value="#0000ff">Blue</option>
+      <option value="#4b0082">Indigo</option>
+      <option value="#820bbb">Violet</option>
+      <option value="#ff69b4">Pink</option>
+      <option value="#ffffff">Eraser</option>
+    </select>
+
+    <!-- Brush Width -->
+    <button class="label">Width</button>
+    <select id="width">
+      <option value="1">Skinny</option>
+      <option value="7">Thin</option>
+      <option value="20">Medium</option>
+      <option value="40">Thick</option>
+      <option value="80">Huge</option>
+    </select>
+
+    <!-- Brush Style -->
+    <button class="label">Style</button>
+    <select id="style">
+      <option value="round">Round</option>
+      <option value="butt">Flat</option>
+      <option value="square">Square</option>
+    </select>
+
+    <!-- Opacity -->
+    <button class="label">Opacity</button>
+    <select id="opacity">
+      <option value="1">1</option>
+      <option value="0.75">0.75</option>
+      <option value="0.5">0.5</option>
+      <option value="0.25">0.25</option>
+    </select>
+
+    <br>
+    <a href="/"><button class="button-primary">Save Canvas</button></a>
+    <a href="/"><button>Clear Canvas</button></a>
+  </div>
+
+<script src="app.js"></script>
