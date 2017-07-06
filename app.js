@@ -44,5 +44,9 @@ function draw(e) {
   ctx.lineTo(pos.x, pos.y); // to position
 
   ctx.stroke(); // draw it!
+ }
 
+ // new position from mouse events
+ function clearCanvas(e) {
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
  }
